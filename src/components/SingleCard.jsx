@@ -5,8 +5,10 @@ export default function SingleCard(props){
     }
 return(
   <div className={styles.card}>
-     <img src={props.card.src} alt="card front" className="front" />
-     <img src="./img/cover.png" alt="card back" className="back" onClick={handleClick} />
+      <div className={ `${props.flipped && styles.flipped}`}>
+     <img src={props.card.src} alt="card front" className={styles.front} />
+     <img src="./img/cover.png" alt="card back" className={styles.back} onClick={handleClick} />
+     </div>
 </div>
 )
 }
