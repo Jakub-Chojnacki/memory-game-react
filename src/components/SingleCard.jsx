@@ -1,7 +1,10 @@
 import styles from './SingleCard.module.css'
 export default function SingleCard(props){
     const handleClick=()=>{
-        props.onHandleChoice(props.card)
+        if(!props.disabled){
+            props.onHandleChoice(props.card)
+        }
+        
     }
 return(
   <div className={styles.card}>
